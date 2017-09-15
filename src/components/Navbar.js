@@ -10,12 +10,15 @@ class Navbar extends Component{
   render(){
 
     return(
-      <nav>
-        <ul>
-          <li> <p> Home </p> </li>
-          <li> <p> Top Rated Playlists </p> </li>
-          <li> <p> Concerts </p> </li>
-        </ul>
+      <div>
+        <nav className="navBar">
+          <ul className="navLinks">
+            <li className="navLink"> <p> Home </p> </li>
+            <li className="navLink"> <p> Top Rated Playlists </p> </li>
+            <li className="navLink"> <p> Logout </p> </li>
+          </ul>
+        </nav>
+      </div>
 
     )
   }
