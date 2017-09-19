@@ -2,10 +2,6 @@
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}
 
 .App-header {
   background-image: url("http://media1.santabanta.com/full1/Miscellaneous/Musical%20Instruments/musical-instruments-90a.jpg");
@@ -15,20 +11,21 @@
   padding: 20px;
   color: white;
 
+
 }
 
 .App-intro {
   font-size: large;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
 
 /* NAVBAR styles*/
 
 .navBar{
+  background-color:  lightgrey;
+  margin-top: 0px;
+  margin-bottom: 5px;
+  padding: 1px;
 
 }
 

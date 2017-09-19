@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './styles/App.css';
 
 //import components
@@ -11,9 +10,30 @@ class App extends Component {
   constructor(props){
     super(props);
 
-    
+    this.state = {
+      playlist: [{
+        "User": "Christian",
+        "ArtistorBand": "Widespread Panic",
+        "Song": "Coconuts",
+        "Notes": "Song about coconuts"
+      }, {
+        "User": "Christian",
+        "ArtistorBand": "Blitzen Trapper",
+        "Song": "Furr",
+        "Notes": "Let out your inner Animal"
+      },
+      {
+        "User": "Pluck em '92",
+        "ArtistorBand": "Shovels & Rope",
+        "Song": "Birmingham",
+        "Notes": "A pair of Charleston natives"
+      },]
+    }
   }
   render() {
+
+    let playlistItems = this.state.playlist.map(items => <Playlist songs={items} />)
+
     return (
       <div className="App">
         <div className="App-header">
@@ -24,7 +44,8 @@ class App extends Component {
         </div>
         <div className="main">
           <PlaylistForm />
-          <Playlist />
+
+          <Playlist items={playlistItems} />
 
         </div>
 

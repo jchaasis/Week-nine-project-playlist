@@ -5,33 +5,12 @@ import PlaylistItem from './PlaylistItem';
 
 
 class Playlist extends Component {
-  constructor(props){
-    super(props);
-
-    this.state = {
-      playlist: [{
-        "User": "Christian",
-        "ArtistorBand": "Widespread Panic",
-        "Song": "Coconuts",
-        "Notes": "Song about coconuts"
-      }, {
-        "User": "Christian",
-        "ArtistorBand": "Blitzen Trapper",
-        "Song": "Furr",
-        "Notes": "Let out your inner Animal"
-      },
-      {
-        "User": "Pluck em '92",
-        "ArtistorBand": "Shovels & Rope",
-        "Song": "Birmingham",
-        "Notes": "A pair of Charleston natives"
-      },]
-    }
-  }
-
-
 
   render(){
+
+    let items = this.props.items.map((item, index )=> <PlaylistItem key={index} song={item} />);
+
+    console.log(items);
 
     return(
       <div className="playlistTable">
@@ -43,10 +22,11 @@ class Playlist extends Component {
             <th>Song</th>
             <th>Notes</th>
           </tr>
-          <PlaylistItem song={this.state.playlist[1]}/>
+
+          {items}
+
         </tbody>
       </table>
-
       </div>
     )
   }
