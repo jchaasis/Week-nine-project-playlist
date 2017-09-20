@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 
+import Star from './Star';
 class PlaylistItem extends Component {
 
   render() {
@@ -8,6 +9,7 @@ class PlaylistItem extends Component {
     return(
 
       <tr>
+        <td> <Star /> </td>
         <td> {this.props.song.props.songs.User} </td>
         <td> {this.props.song.props.songs.ArtistorBand} </td>
         <td> {this.props.song.props.songs.Song} </td>

@@ -5,23 +5,6 @@ class PlaylistForm extends Component{
     super(props);
 
     this.state= {
-      playlist: [{
-        "User": "Christian",
-        "ArtistorBand": "Widespread Panic",
-        "Song": "Coconuts",
-        "Notes": "Song about coconuts"
-      }, {
-        "User": "Christian",
-        "ArtistorBand": "Blitzen Trapper",
-        "Song": "Furr",
-        "Notes": "Let out your inner Animal"
-      },
-      {
-        "User": "Pluck em '92",
-        "ArtistorBand": "Shovels & Rope",
-        "Song": "Birmingham",
-        "Notes": "A pair of Charleston natives"
-      },],
 
       item: {
         "User": '',
@@ -31,36 +14,36 @@ class PlaylistForm extends Component{
       }
     }
   }
-//
-//    newSong(){
-//     this.setState{
-//       item:{
-//       "User": this.state.name,
-//       "ArtistorBand": this.state.artist,
-//       "Song": this.state.song,
-//       "Notes": this.state.notes
-//     }
-//   }
-// }
-//
-//   addSong(){
-//     this.setState({
-//       playlist.push(newSong);
-//     });
-//   }
+
+   newSong(){
+    this.setState({
+      item:{
+      "User": this.state.name,
+      "ArtistorBand": this.state.artist,
+      "Song": this.state.song,
+      "Notes": this.state.notes
+    }
+  })
+}
+
+  addSong(){
+    // this.setState({
+    //   this.props.playlist.push(this.state.item);
+    // });
+  }
 
   render(){
 
     return(
       <div className="PlaylistForm">
         <h3> Add Song </h3>
-        <input type="text" placeholder="User Name" value = {this.state.name}/>
+        <input type="text" placeholder="User Name" value = {this.state.User}/>
         <br/>
-        <input type="text" placeholder="Artist/Band" />
+        <input type="text" placeholder="Artist/Band" value = {this.state.ArtistorBand}/>
         <br/>
-        <input type="text" placeholder="Song" />
+        <input type="text" placeholder="Song" value={this.state.Song}/>
         <br/>
-        <input type="text" placeholder="Notes" />
+        <input type="text" placeholder="Notes" value={this.state.Notes}/>
         <br/>
         <button> Add </button>
       </div>

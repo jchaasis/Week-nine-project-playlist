@@ -17,6 +17,7 @@ class Playlist extends Component {
       <table>
         <tbody>
           <tr>
+            <th> </th>
             <th>User</th>
             <th>Artist/Band</th>
             <th>Song</th>

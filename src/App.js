@@ -43,7 +43,7 @@ class App extends Component {
           <Navbar />
         </div>
         <div className="main">
-          <PlaylistForm />
+          <PlaylistForm playlist={playlistItems}/>
 
           <Playlist items={playlistItems} />
 
