@@ -30,6 +30,19 @@ class App extends Component {
       },]
     }
   }
+
+  addNewItem(user, artist, song, notes){
+    let item = {
+      "User": user,
+      "ArtistorBand": artist,
+      "Song": song,
+      "Notes": notes
+    }
+    this.state.playlist.push(item);
+    console.log(this.state.playlist);
+  }
+
+
   render() {
 
     let playlistItems = this.state.playlist.map(items => <Playlist songs={items} />)
@@ -43,7 +56,7 @@ class App extends Component {
           <Navbar />
         </div>
         <div className="main">
-          <PlaylistForm playlist={playlistItems}/>
+          <PlaylistForm playlist={playlistItems} add={(user, artist, song, notes) => this.addNewItem(user, artist, song, notes)}/>
 
           <Playlist items={playlistItems} />
 

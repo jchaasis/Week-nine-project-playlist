@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 //import playlist item
 import PlaylistItem from './PlaylistItem';
+import SearchBar from './SearchBar';
 
 
 class Playlist extends Component {
@@ -14,6 +15,7 @@ class Playlist extends Component {
 
     return(
       <div className="playlistTable">
+      <SearchBar />
       <table>
         <tbody>
           <tr>
