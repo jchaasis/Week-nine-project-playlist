@@ -15,18 +15,21 @@ class App extends Component {
         "User": "Christian",
         "ArtistorBand": "Widespread Panic",
         "Song": "Coconuts",
-        "Notes": "Song about coconuts"
+        "Notes": "Song about coconuts",
+        "favorite": false,
       }, {
         "User": "Christian",
         "ArtistorBand": "Blitzen Trapper",
         "Song": "Furr",
-        "Notes": "Let out your inner Animal"
+        "Notes": "Let out your inner Animal",
+        "favorite": false,
       },
       {
         "User": "Pluck em '92",
         "ArtistorBand": "Shovels & Rope",
         "Song": "Birmingham",
-        "Notes": "A pair of Charleston natives"
+        "Notes": "A pair of Charleston natives",
+        "favorite": false,
       },]
     }
   }
@@ -36,12 +39,18 @@ class App extends Component {
       "User": user,
       "ArtistorBand": artist,
       "Song": song,
-      "Notes": notes
+      "Notes": notes,
+      "favorite": false,
     }
-    this.state.playlist.push(item);
+
+    let updatedList = this.state.playlist.slice();
+        updatedList.push(item);
+        this.setState({
+          playlist: updatedList
+        })
+    // const this.state.playlist.push(item);
     console.log(this.state.playlist);
   }
-
 
   render() {
 
