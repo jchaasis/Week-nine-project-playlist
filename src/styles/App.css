@@ -23,10 +23,12 @@
   margin-top: 0px;
   margin-bottom: 5px;
   padding: 1px;
-
 }
 
 .navLinks{
+  font-family: 'Permanent Marker', 'cursive';
+  text-decoration: underline;
+  text-decoration-color: rgb(210, 29, 38);
   list-style: none;
   display: flex;
   justify-content: center;
@@ -34,7 +36,6 @@
 
 .navLink{
   margin: 10px;
-
 }
 
 /* Main Body styles*/
@@ -47,4 +48,35 @@
 /* Playlist div*/
 .playlistTable{
   margin-left: 50px;
+}
+th{
+   font-family: 'Permanent Marker', 'cursive';
+   text-decoration: underline;
+   text-decoration-color: rgb(210, 29, 38);
+}
+
+/* form styles*/
+
+.formTitle{
+   font-family: 'Permanent Marker', 'cursive';
+   text-decoration: underline;
+   text-decoration-color: rgb(210, 29, 38);
+}
+
+.formButton{
+  margin-top: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-family: 'Permanent Marker', 'cursive';
+  background-color: rgb(210, 29, 38);
+  color: white;
+  border-color: black;
+  border-radius: 3px;
+  border-width:thin;
+}
+
+.formButton:hover{
+  background-color: white;
+  color: black;
+  border-color: rgb(210, 29, 38);
 }

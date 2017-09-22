@@ -6,16 +6,24 @@ import SearchBar from './SearchBar';
 
 
 class Playlist extends Component {
+  //pass the index of the star that is clicked up to app.js
+  handleStarClick(index){
+    this.props.toggleStar(index)
+  }
+  //pass the search results from the form to app.js
+  handleSearch(event){
+    this.props.handleSearch(event);
+  }
 
   render(){
 
-    let items = this.props.items.map((item, index )=> <PlaylistItem key={index} song={item} />);
+    //Create an individual playlist row for each song in the playlist array
+    let items = this.props.items.map((item, index)=> <PlaylistItem key={index} song={item} toggleStar={ () => this.props.toggleStar(index)}/>);
 
-    console.log(items);
 
     return(
       <div className="playlistTable">
-      <SearchBar />
+      <SearchBar handleSearch={event => this.props.handleSearch(event)}/>
       <table>
         <tbody>
           <tr>

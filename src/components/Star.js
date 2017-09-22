@@ -1,39 +1,22 @@
 import React, { Component } from 'react';
 
-
-
 class Star extends Component {
-  constructor(props){
-    super(props);
 
-    this.state = {
-
-      value:false,
-    }
-  }
 
   //when we click a star, it will switch between empty and filled
   handleMouseClick(){
-    if (this.state.value===true){
-      this.setState({
-        value: false
-      });
-    } else {
-      this.setState({
-        value: true
-      })
-    }
-
+    this.props.onClick(this.props.fav)
   }
 
   render(){
-    if (this.state.value === false){
+    // console.log(this.props.fav)
+    if (this.props.fav === false){
       return(
         <span className="star" onClick={event=> this.handleMouseClick()} > &#9734; </span>
       )
     }
 
-    if (this.state.value === true){
+    if (this.props.fav === true){
       return(
         <span className="star" onClick={event=> this.handleMouseClick()}> &#9733; </span>
       )

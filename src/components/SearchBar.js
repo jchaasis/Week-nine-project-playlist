@@ -10,25 +10,19 @@ class SearchBar extends Component {
   }
 
   handleTyping(e){
-    //set the state of the
+    // set the state of the text
     this.setState({
       text: e.target.value,
     })
-
-
-  }
-
-  handleSearch(){
-
-
+    //pass the current value of the search to playlist.js then app.js
+    this.props.handleSearch(e.target.value);
   }
 
   render(){
     return(
       <div className="searchbar">
-        <input type="text" placeholder="Search Playlist" value={this.state.text}
+        <input type="text" placeholder="Filter Songs..." value={this.state.text}
         onChange={ e => this.handleTyping(e)}/>
-        <button onClick={()=>this.handleSearch()}> Search </button>
       </div>
 
     )

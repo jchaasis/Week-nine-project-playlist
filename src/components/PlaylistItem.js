@@ -3,21 +3,22 @@ import React, { Component } from 'react';
 import Star from './Star';
 class PlaylistItem extends Component {
 
-  render() {
-    console.log(this.props.song);
+  handleStarClick(index){
+    this.props.toggleStar(index)
+  }
 
+  render() {
+    const item = this.props.song
     return(
 
       <tr>
-        <td> <Star /> </td>
-        <td> {this.props.song.props.songs.User} </td>
-        <td> {this.props.song.props.songs.ArtistorBand} </td>
-        <td> {this.props.song.props.songs.Song} </td>
-        <td> {this.props.song.props.songs.Notes} </td>
+        <td> <Star fav={item.favorite} onClick={index=>this.handleStarClick(index)}/> </td>
+        <td> {item.User} </td>
+        <td> {item.ArtistorBand} </td>
+        <td> {item.Song} </td>
+        <td> {item.Notes} </td>
       </tr>
-
     )
-
   }
 }
 
